@@ -1,805 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sara Hammouda — AI &amp; Data Science</title>
-<meta name="description" content="Sara Hammouda — Data Science &amp; AI student. Python, SQL, Machine Learning, and building data-driven products.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --white:#ffffff;
-    --off-white:#f6f6f7;
-    --grey-100:#eaeaec;
-    --grey-200:#dcdce0;
-    --grey-300:#c4c4ca;
-    --grey-500:#8d8d96;
-    --grey-600:#67676f;
-    --grey-700:#48484f;
-    --charcoal:#131316;
-    --charcoal-soft:#1c1c20;
-    --line-dark: rgba(255,255,255,0.1);
-    --line-light: rgba(19,19,22,0.1);
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-    --ease: cubic-bezier(.16,.8,.24,1);
-  }
-
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--font-body);
-    background:var(--white);
-    color:var(--charcoal);
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  img{max-width:100%;display:block;}
-  a{color:inherit;text-decoration:none;}
-  ul{list-style:none;}
-  section{position:relative;}
-
-  ::selection{background:var(--charcoal);color:var(--white);}
-
-  .wrap{
-    width:min(1180px, 90%);
-    margin:0 auto;
-  }
-
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:.75rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--grey-500);
-    display:flex;
-    align-items:center;
-    gap:.6rem;
-    margin-bottom:1.1rem;
-  }
-  .eyebrow::before{
-    content:'';
-    width:22px;height:1px;
-    background:var(--grey-500);
-    display:inline-block;
-  }
-
-  h1,h2,h3,h4{
-    font-family:var(--font-display);
-    font-weight:600;
-    letter-spacing:-0.01em;
-    line-height:1.05;
-  }
-
-  /* ---------- reveal on scroll ---------- */
-  [data-reveal]{
-    opacity:0;
-    transform:translateY(28px);
-    transition:opacity .8s var(--ease), transform .8s var(--ease);
-  }
-  [data-reveal].is-visible{
-    opacity:1;
-    transform:translateY(0);
-  }
-  [data-reveal-stagger] > *{
-    opacity:0;
-    transform:translateY(22px);
-    transition:opacity .7s var(--ease), transform .7s var(--ease);
-  }
-  [data-reveal-stagger].is-visible > *{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    [data-reveal],[data-reveal-stagger] > *{
-      opacity:1 !important; transform:none !important; transition:none !important;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sara Hamouda — AI Engineer | Data Science & Generative AI</title>
+  <meta name="description" content="Portfolio de Sara Hamouda, AI Engineer spécialisée en Data Science, Generative AI, LLMs, RAG, Machine Learning et Data Engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#050814;--bg2:#07111f;--card:rgba(255,255,255,.075);--card2:rgba(255,255,255,.11);
+      --text:#f6f8ff;--muted:#aab6d6;--soft:#6d789c;--line:rgba(255,255,255,.13);
+      --a:#7c3cff;--b:#00e5ff;--c:#2cff9a;--d:#ffcd4d;--danger:#ff5d8f;
+      --shadow:0 24px 80px rgba(0,0,0,.42);--r:28px;--max:1180px;
     }
-    html{scroll-behavior:auto;}
-  }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 10% 10%,rgba(124,60,255,.28),transparent 34%),radial-gradient(circle at 88% 18%,rgba(0,229,255,.2),transparent 30%),linear-gradient(180deg,var(--bg),var(--bg2) 48%,#04060d);color:var(--text);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}.noise{position:fixed;inset:0;pointer-events:none;opacity:.11;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+    .orb{position:fixed;border-radius:999px;filter:blur(44px);opacity:.5;z-index:0}.orb.one{width:330px;height:330px;background:var(--a);left:-120px;top:180px}.orb.two{width:260px;height:260px;background:var(--b);right:-90px;top:70px}.orb.three{width:260px;height:260px;background:var(--c);right:18%;bottom:-120px;opacity:.22}
+    header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(18px);background:rgba(5,8,20,.64);border-bottom:1px solid rgba(255,255,255,.09)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:-.04em}.brand span{display:inline-flex;width:10px;height:10px;background:linear-gradient(135deg,var(--b),var(--c));border-radius:99px;margin-right:10px;box-shadow:0 0 22px var(--b)}
+    .links{display:flex;gap:24px;color:var(--muted);font-weight:700;font-size:14px}.links a:hover{color:#fff}.nav-cta{padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);font-weight:800}.nav-cta:hover{background:#fff;color:#050814}
+    main,section,footer{position:relative;z-index:1}.hero{min-height:100vh;display:grid;align-items:center;padding:130px 0 80px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}.kicker{display:inline-flex;gap:10px;align-items:center;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);font:600 13px JetBrains Mono,monospace}.live-dot{width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 18px var(--c)}
+    h1{font-size:clamp(54px,8vw,116px);line-height:.9;letter-spacing:-.085em;margin:24px 0 18px}.grad{background:linear-gradient(90deg,#fff,var(--b),var(--c));-webkit-background-clip:text;color:transparent}.subtitle{font-size:clamp(22px,3.2vw,42px);line-height:1.1;font-weight:900;letter-spacing:-.05em;color:#dfe7ff;margin:0 0 22px}.lede{font-size:18px;line-height:1.72;color:var(--muted);max-width:720px;margin:0 0 32px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;font-weight:900;border:1px solid var(--line);transition:.25s}.btn-primary{background:linear-gradient(135deg,var(--a),var(--b));border:0;box-shadow:0 18px 45px rgba(0,229,255,.18)}.btn:hover{transform:translateY(-3px)}.btn-ghost{background:rgba(255,255,255,.06)}
+    .terminal{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.055));box-shadow:var(--shadow);overflow:hidden}.terminal-top{height:46px;display:flex;gap:8px;align-items:center;padding:0 18px;border-bottom:1px solid var(--line)}.terminal-top i{width:11px;height:11px;border-radius:50%;background:var(--danger)}.terminal-top i:nth-child(2){background:var(--d)}.terminal-top i:nth-child(3){background:var(--c)}.terminal-body{padding:26px;font-family:JetBrains Mono,monospace;font-size:13px;line-height:1.9;color:#dbe7ff}.cmd{color:var(--c)}.key{color:var(--b)}.val{color:#fff}.comment{color:var(--soft)}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}.metric{padding:18px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.055)}.metric b{display:block;font-size:28px;letter-spacing:-.05em}.metric span{color:var(--muted);font-size:13px;font-weight:700}
+    .section{padding:110px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.eyebrow{font:800 13px JetBrains Mono,monospace;color:var(--b);text-transform:uppercase;letter-spacing:.14em}.section h2{font-size:clamp(34px,5vw,70px);line-height:.98;letter-spacing:-.07em;margin:12px 0 0}.section-note{color:var(--muted);max-width:430px;line-height:1.7}.panel{border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.06);box-shadow:var(--shadow)}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.about-card{padding:34px}.about-card p{color:var(--muted);line-height:1.8;font-size:17px}.focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.focus{padding:22px;border-radius:22px;background:rgba(255,255,255,.065);border:1px solid var(--line)}.focus strong{display:block;margin-bottom:8px}.focus span{color:var(--muted);font-size:14px;line-height:1.55}
+    .timeline{display:grid;gap:16px}.xp{display:grid;grid-template-columns:220px 1fr;gap:22px;padding:26px;border:1px solid var(--line);border-radius:26px;background:rgba(255,255,255,.055);transition:.25s}.xp:hover{background:rgba(255,255,255,.09);transform:translateY(-3px)}.date{font:700 13px JetBrains Mono,monospace;color:var(--b);line-height:1.6}.xp h3{font-size:24px;margin:0 0 5px;letter-spacing:-.04em}.org{color:#fff;font-weight:800}.place{color:var(--muted);font-size:14px}.xp ul{margin:16px 0 0;padding-left:18px;color:var(--muted);line-height:1.65}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.tag,.pill{display:inline-flex;padding:8px 10px;border-radius:999px;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.22);color:#dffbff;font-size:12px;font-weight:800}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{padding:28px;min-height:270px;display:flex;flex-direction:column}.project .num{font:800 13px JetBrains Mono,monospace;color:var(--c)}.project h3{font-size:28px;letter-spacing:-.05em;margin:16px 0 10px}.project p{color:var(--muted);line-height:1.7;margin:0}.project a{margin-top:auto;color:#fff;font-weight:900}.project a:hover{color:var(--b)}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.055)}.skill h3{margin:0 0 14px;font-size:17px}.pill-row{display:flex;gap:8px;flex-wrap:wrap}.pill{background:rgba(255,255,255,.07);border-color:var(--line);color:#eef3ff}
+    .edu{display:grid;gap:14px}.edu-row{display:grid;grid-template-columns:210px 1fr;gap:22px;padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.055)}.edu-row h3{margin:0 0 6px;font-size:22px}.edu-row p{margin:0;color:var(--muted)}
+    .contact{padding:54px;text-align:center;border:1px solid var(--line);border-radius:36px;background:radial-gradient(circle at 50% 0,rgba(0,229,255,.18),transparent 42%),rgba(255,255,255,.07);box-shadow:var(--shadow)}.contact h2{font-size:clamp(38px,6vw,78px);letter-spacing:-.08em;margin:12px 0}.contact p{color:var(--muted);font-size:18px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}.contact-links a{padding:12px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-weight:800;color:var(--muted)}.contact-links a:hover{color:#fff;background:rgba(255,255,255,.1)}
+    footer{padding:34px 0;color:var(--soft);border-top:1px solid var(--line)}[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}[data-reveal].show{opacity:1;transform:none}
 
-  /* ---------- nav ---------- */
-  header{
-    position:fixed;
-    top:0;left:0;right:0;
-    z-index:100;
-    padding:22px 0;
-    transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
-    border-bottom:1px solid transparent;
-  }
-  header.scrolled{
-    background:rgba(255,255,255,.82);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line-light);
-    padding:14px 0;
-  }
-  .nav-inner{
-    display:flex;align-items:center;justify-content:space-between;
-  }
-  .logo{
-    font-family:var(--font-display);
-    font-weight:700;
-    font-size:1.05rem;
-    letter-spacing:-0.02em;
-    display:flex;align-items:center;gap:.5rem;
-    color:var(--charcoal);
-    mix-blend-mode:difference;
-    filter:invert(1);
-  }
-  header.scrolled .logo{ filter:none; mix-blend-mode:normal; }
-  .logo .dot{
-    width:7px;height:7px;border-radius:50%;
-    background:var(--charcoal);
-    animation:pulse 2.4s ease-in-out infinite;
-  }
-  header.scrolled .logo .dot{background:var(--charcoal);}
-  @keyframes pulse{
-    0%,100%{opacity:1; transform:scale(1);}
-    50%{opacity:.35; transform:scale(.7);}
-  }
-  nav.links{
-    display:flex;gap:2.1rem;
-    font-size:.86rem;
-    color:var(--grey-300);
-    mix-blend-mode:difference;
-    filter:invert(1);
-  }
-  header.scrolled nav.links{ color:var(--grey-600); filter:none; mix-blend-mode:normal; }
-  nav.links a{position:relative;padding:.2rem 0;}
-  nav.links a::after{
-    content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;
-    background:currentColor;transition:width .3s var(--ease);
-  }
-  nav.links a:hover{color:var(--charcoal);}
-  header.scrolled nav.links a:hover{color:var(--charcoal);}
-  nav.links a:hover::after{width:100%;}
-  .nav-cta{
-    font-size:.8rem;
-    font-family:var(--font-mono);
-    border:1px solid var(--grey-300);
-    padding:.5rem 1rem;
-    border-radius:999px;
-    transition:all .3s var(--ease);
-    white-space:nowrap;
-    color:var(--charcoal);
-  }
-  header:not(.scrolled) .nav-cta{border-color:rgba(255,255,255,.35); color:#fff;}
-  .nav-cta:hover{background:var(--charcoal); color:var(--white); border-color:var(--charcoal);}
-  .burger{display:none;}
-
-  /* ---------- hero ---------- */
-  .hero{
-    height:100vh;
-    min-height:640px;
-    background:var(--charcoal);
-    color:var(--white);
-    position:relative;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-  }
-  .hero canvas{
-    position:absolute;inset:0;
-    width:100%;height:100%;
-    opacity:.55;
-  }
-  .hero::after{
-    content:'';
-    position:absolute;inset:0;
-    background:radial-gradient(ellipse at 50% 100%, rgba(19,19,22,0) 0%, var(--charcoal) 78%);
-    pointer-events:none;
-  }
-  .hero-inner{
-    position:relative;z-index:2;
-    width:min(1180px,90%);
-    margin:0 auto;
-  }
-  .hero .eyebrow{color:var(--grey-300);}
-  .hero .eyebrow::before{background:var(--grey-300);}
-  .hero h1{
-    font-size:clamp(2.6rem, 7.4vw, 5.6rem);
-    background:linear-gradient(100deg, #fff 20%, var(--grey-500) 42%, #fff 64%);
-    background-size:220% auto;
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    animation:shimmer 7s linear infinite;
-  }
-  @keyframes shimmer{
-    0%{background-position:0% 50%;}
-    100%{background-position:220% 50%;}
-  }
-  .hero .role{
-    font-family:var(--font-mono);
-    color:var(--grey-300);
-    font-size:clamp(.9rem,1.6vw,1.05rem);
-    margin-top:1.3rem;
-    letter-spacing:.04em;
-  }
-  .hero p.lede{
-    margin-top:1.4rem;
-    max-width:560px;
-    color:var(--grey-300);
-    font-size:1.06rem;
-    line-height:1.65;
-  }
-  .hero-cta{
-    display:flex;gap:1rem;margin-top:2.6rem;flex-wrap:wrap;
-  }
-  .btn{
-    font-family:var(--font-mono);
-    font-size:.85rem;
-    padding:.9rem 1.6rem;
-    border-radius:999px;
-    display:inline-flex;align-items:center;gap:.5rem;
-    transition:all .35s var(--ease);
-    border:1px solid transparent;
-  }
-  .btn-primary{
-    background:var(--white);color:var(--charcoal);
-  }
-  .btn-primary:hover{
-    background:var(--grey-100); transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(255,255,255,.12);
-  }
-  .btn-ghost{
-    border-color:rgba(255,255,255,.28); color:var(--white);
-  }
-  .btn-ghost:hover{
-    border-color:#fff; background:rgba(255,255,255,.06); transform:translateY(-2px);
-  }
-  .scroll-cue{
-    position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
-    display:flex;flex-direction:column;align-items:center;gap:.5rem;
-    color:var(--grey-500);font-family:var(--font-mono);font-size:.68rem;
-    letter-spacing:.14em;text-transform:uppercase;
-    z-index:2;
-  }
-  .scroll-cue .line{
-    width:1px;height:34px;background:linear-gradient(var(--grey-500), transparent);
-    animation:scrolldown 1.8s ease-in-out infinite;
-  }
-  @keyframes scrolldown{
-    0%{transform:scaleY(0); transform-origin:top;}
-    50%{transform:scaleY(1); transform-origin:top;}
-    50.1%{transform-origin:bottom;}
-    100%{transform:scaleY(0); transform-origin:bottom;}
-  }
-
-  /* ---------- generic section spacing ---------- */
-  .section{padding:7.5rem 0;}
-  .section-head{
-    display:flex;justify-content:space-between;align-items:flex-end;
-    gap:2rem;margin-bottom:3.4rem;flex-wrap:wrap;
-  }
-  .section-head h2{font-size:clamp(2rem,4vw,2.8rem);}
-  .section-num{
-    font-family:var(--font-mono);color:var(--grey-300);font-size:.85rem;
-  }
-  .section-alt{background:var(--off-white);}
-
-  /* ---------- about ---------- */
-  .about-grid{
-    display:grid;grid-template-columns:1.15fr .85fr;gap:4.5rem;align-items:start;
-  }
-  .about-grid p{
-    color:var(--grey-700);font-size:1.08rem;line-height:1.8;margin-bottom:1.2rem;
-  }
-  .about-grid p strong{color:var(--charcoal); font-weight:600;}
-  .stat-list{
-    border-top:1px solid var(--line-light);
-  }
-  .stat-row{
-    display:flex;justify-content:space-between;align-items:baseline;
-    padding:1.5rem 0;border-bottom:1px solid var(--line-light);
-  }
-  .stat-row .n{
-    font-family:var(--font-display);font-size:2.1rem;font-weight:600;
-  }
-  .stat-row .l{
-    font-family:var(--font-mono);font-size:.78rem;color:var(--grey-500);
-    text-align:right;max-width:170px;
-  }
-
-  /* ---------- experience timeline ---------- */
-  .timeline-item{
-    display:grid;grid-template-columns:180px 1fr;gap:2.5rem;
-    padding:2.6rem 0;border-top:1px solid var(--line-light);
-  }
-  .timeline-item:last-child{border-bottom:1px solid var(--line-light);}
-  .timeline-date{
-    font-family:var(--font-mono);font-size:.82rem;color:var(--grey-500);
-    padding-top:.3rem;
-  }
-  .timeline-body h3{font-size:1.35rem;margin-bottom:.3rem;}
-  .timeline-body .org{
-    font-family:var(--font-mono);font-size:.85rem;color:var(--grey-600);margin-bottom:1.1rem;
-    display:block;
-  }
-  .timeline-body ul{margin-top:.8rem;}
-  .timeline-body li{
-    position:relative;padding-left:1.3rem;color:var(--grey-700);
-    line-height:1.7;margin-bottom:.5rem;font-size:.98rem;
-  }
-  .timeline-body li::before{
-    content:'';position:absolute;left:0;top:.65em;width:6px;height:1px;background:var(--grey-500);
-  }
-  .tagrow{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem;}
-  .tag{
-    font-family:var(--font-mono);font-size:.72rem;color:var(--grey-600);
-    border:1px solid var(--grey-200);padding:.32rem .7rem;border-radius:999px;
-  }
-
-  /* ---------- projects ---------- */
-  .project-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;
-  }
-  .project-card{
-    border:1px solid var(--line-light);
-    border-radius:20px;
-    padding:2.1rem;
-    background:var(--white);
-    transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease);
-    position:relative;
-    overflow:hidden;
-    display:flex;flex-direction:column;
-    min-height:290px;
-  }
-  .project-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 24px 50px rgba(19,19,22,.09);
-    border-color:var(--grey-300);
-  }
-  .project-mark{
-    width:100%;height:110px;border-radius:14px;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(19,19,22,.08), transparent 60%),
-      repeating-linear-gradient(135deg, rgba(19,19,22,.06) 0 1px, transparent 1px 14px);
-    border:1px solid var(--line-light);
-    margin-bottom:1.6rem;
-    position:relative;
-    overflow:hidden;
-  }
-  .project-mark::after{
-    content:attr(data-index);
-    position:absolute;bottom:10px;right:14px;
-    font-family:var(--font-mono);font-size:2.1rem;color:rgba(19,19,22,.14);
-    font-weight:600;
-  }
-  .project-card h3{font-size:1.3rem;margin-bottom:.5rem;}
-  .project-card p{color:var(--grey-600);font-size:.95rem;line-height:1.6;margin-bottom:1rem;flex-grow:1;}
-  .project-link{
-    font-family:var(--font-mono);font-size:.8rem;
-    display:inline-flex;align-items:center;gap:.4rem;
-    color:var(--charcoal);margin-top:auto;
-    border-top:1px solid var(--line-light);padding-top:1rem;
-  }
-  .project-link svg{transition:transform .3s var(--ease);}
-  .project-card:hover .project-link svg{transform:translate(3px,-3px);}
-
-  /* ---------- skills ---------- */
-  .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 4rem;}
-  .skill-group h4{
-    font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;
-    text-transform:uppercase;color:var(--grey-500);margin-bottom:1.1rem;font-weight:500;
-  }
-  .pill-row{display:flex;flex-wrap:wrap;gap:.6rem;}
-  .pill{
-    font-size:.86rem;padding:.55rem 1rem;border:1px solid var(--grey-200);
-    border-radius:10px;color:var(--charcoal);background:var(--white);
-    transition:all .3s var(--ease);
-  }
-  .pill:hover{background:var(--charcoal);color:var(--white);border-color:var(--charcoal);transform:translateY(-2px);}
-
-  /* ---------- education ---------- */
-  .edu-item{
-    display:grid;grid-template-columns:180px 1fr;gap:2.5rem;
-    padding:2.6rem 0;border-top:1px solid var(--line-light);
-  }
-  .edu-item:last-child{border-bottom:1px solid var(--line-light);}
-  .edu-date{font-family:var(--font-mono);font-size:.82rem;color:var(--grey-500);padding-top:.3rem;}
-  .edu-body h3{font-size:1.25rem;margin-bottom:.2rem;}
-  .edu-body .org{font-family:var(--font-mono);font-size:.85rem;color:var(--grey-600);}
-  .edu-body .degree{margin-top:.8rem;font-weight:600;font-size:.98rem;}
-  .edu-focus{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.5rem;}
-
-  /* ---------- contact ---------- */
-  .contact{
-    background:var(--charcoal);color:var(--white);
-    border-radius:28px;
-    padding:5rem 3rem;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .contact::before{
-    content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 50% 0%, rgba(255,255,255,.08), transparent 60%);
-  }
-  .contact h2{
-    font-size:clamp(2.1rem,5vw,3.4rem);position:relative;z-index:1;
-  }
-  .contact p{color:var(--grey-300);margin-top:1.1rem;max-width:480px;margin-inline:auto;position:relative;z-index:1;}
-  .contact-cta{margin-top:2.4rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
-  .contact-links{
-    margin-top:3.2rem;display:flex;justify-content:center;gap:2.2rem;flex-wrap:wrap;
-    font-family:var(--font-mono);font-size:.85rem;color:var(--grey-300);
-    position:relative;z-index:1;
-  }
-  .contact-links a{display:flex;align-items:center;gap:.5rem;transition:color .3s;}
-  .contact-links a:hover{color:#fff;}
-
-  footer{
-    padding:2.6rem 0;
-    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
-    font-family:var(--font-mono);font-size:.76rem;color:var(--grey-500);
-  }
-
-  /* ---------- responsive ---------- */
-  @media (max-width:900px){
-    nav.links{display:none;}
-    .about-grid{grid-template-columns:1fr;gap:2.5rem;}
-    .project-grid{grid-template-columns:1fr;}
-    .skill-groups{grid-template-columns:1fr;gap:2rem;}
-    .timeline-item,.edu-item{grid-template-columns:1fr;gap:.6rem;}
-    .contact{padding:3.5rem 1.6rem;border-radius:20px;}
-    .section{padding:5rem 0;}
-  }
-</style>
+    .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.impact-card{padding:20px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.04));position:relative;overflow:hidden}.impact-card:before{content:"";position:absolute;inset:auto -40px -60px auto;width:130px;height:130px;border-radius:50%;background:rgba(0,229,255,.12);filter:blur(10px)}.impact-card b{display:block;font-size:30px;letter-spacing:-.06em}.impact-card span{color:var(--muted);font-size:13px;font-weight:800;line-height:1.45}.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.expertise-card{padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.055);min-height:190px}.expertise-card .ico{font-size:24px;margin-bottom:12px}.expertise-card h3{margin:0 0 10px;font-size:20px;letter-spacing:-.04em}.expertise-card p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}.focus-now{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:stretch}.now-card{padding:30px;border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 0 0,rgba(44,255,154,.13),transparent 45%),rgba(255,255,255,.055)}.now-list{display:grid;gap:12px}.now-item{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--muted);line-height:1.55}.now-item strong{color:#fff}.project{min-height:unset}.project .headline{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.badge{font:800 11px JetBrains Mono,monospace;color:#06101b;background:linear-gradient(135deg,var(--c),var(--b));padding:7px 10px;border-radius:999px;white-space:nowrap}.project h4{margin:18px 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--b)}.feature-list{margin:0;padding-left:18px;color:var(--muted);line-height:1.65;font-size:14px}.mini-metrics{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.mini-metric{padding:10px 12px;border-radius:14px;border:1px solid rgba(44,255,154,.24);background:rgba(44,255,154,.08);font-size:12px;font-weight:900;color:#eafff5}.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:8px;align-items:center;margin-top:14px}.flow span{padding:11px 10px;border-radius:14px;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.2);font-size:12px;font-weight:800;color:#dffbff;text-align:center}.flow i{font-style:normal;color:var(--c);font-weight:900}.fomo{margin-top:18px;padding:18px;border:1px solid rgba(255,205,77,.22);background:rgba(255,205,77,.07);border-radius:20px;color:#fff;font-weight:800;line-height:1.55}.proofbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.proof{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid var(--line);color:var(--muted);font-size:12px;font-weight:900}
+    @media (max-width:900px){.impact-strip,.expertise-grid,.focus-now{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow i{display:none}}
+    @media (max-width:900px){.links{display:none}.hero-grid,.about,.projects,.skills{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.xp,.edu-row{grid-template-columns:1fr}.section-head{display:block}.terminal{order:-1}.hero{padding-top:105px}}
+    @media (max-width:560px){.wrap{width:min(100% - 26px,var(--max))}.metrics{grid-template-columns:1fr}.contact{padding:34px 20px}.nav-cta{display:none}.hero-actions .btn{width:100%;justify-content:center}}
+  </style>
 </head>
 <body>
-
-<header id="siteHeader">
-  <div class="wrap nav-inner">
-    <a href="#top" class="logo"><span class="dot"></span> Sara Hammouda</a>
-    <nav class="links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="assets/resume/sara_cv_ang.pdf" target="_blank" rel="noopener">Résumé ↓</a>
-  </div>
-</header>
-
-<section class="hero" id="top">
-  <canvas id="mesh"></canvas>
-  <div class="hero-inner">
-    <div class="eyebrow">AI &amp; Data Science · Paris / Tunisia</div>
-    <h1>Sara&nbsp;Hammouda</h1>
-    <div class="role">turning raw data into decisions —— python · sql · machine learning</div>
-    <p class="lede">Data Science student building models and products at the intersection of engineering and business — from churn prediction to retail forecasting to logistics AI.</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  <div class="noise"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><span></span>Sara Hamouda</a>
+      <nav class="links">
+        <a href="#about">Profil</a><a href="#expertise">Expertise</a><a href="#experience">Expérience</a><a href="#projects">Projets</a><a href="#focus">Focus</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="assets/resume/SARA_HAMOUDA_CVF.pdf" target="_blank" rel="noopener">CV ↓</a>
     </div>
-  </div>
-  <div class="scroll-cue"><span class="line"></span>Scroll</div>
-</section>
+  </header>
 
-<section class="section" id="about">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div>
-        <div class="eyebrow">01 · About</div>
-        <h2>Grounded in data,<br>built for AI.</h2>
+  <main>
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker"><span class="live-dot"></span> Available for 12-month apprenticeship · Sep 2026</div>
+          <h1>Sara <span class="grad">Hamouda</span></h1>
+          <p class="subtitle"><span id="typed"></span></p>
+          <p class="lede">AI Engineer specialized in Data Science, Generative AI and Machine Learning. I design end-to-end ML/LLM pipelines, RAG systems, dashboards and business-ready AI products.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore projects →</a>
+            <a class="btn btn-ghost" href="mailto:sarahammouda799@gmail.com">Contact me</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><b>60%</b><span>higher recommendation relevance</span></div><div class="metric"><b>92%</b><span>churn prediction accuracy</span></div><div class="metric"><b>4</b><span>AI/data experiences</span></div><div class="metric"><b>12 mo</b><span>apprenticeship target</span></div>
+          </div>
+        </div>
+        <aside class="terminal" aria-label="AI portfolio summary">
+          <div class="terminal-top"><i></i><i></i><i></i></div>
+          <div class="terminal-body">
+            <div><span class="cmd">sara.ai</span> --profile</div>
+            <div>{</div>
+            <div>&nbsp;&nbsp;<span class="key">role</span>: <span class="val">"AI Engineer | GenAI Consultant"</span>,</div>
+            <div>&nbsp;&nbsp;<span class="key">stack</span>: [<span class="val">"Python"</span>, <span class="val">"SQL"</span>, <span class="val">"LangChain"</span>, <span class="val">"FAISS"</span>],</div>
+            <div>&nbsp;&nbsp;<span class="key">focus</span>: [<span class="val">"LLMs"</span>, <span class="val">"RAG"</span>, <span class="val">"AI Agents"</span>, <span class="val">"Data Engineering"</span>],</div>
+            <div>&nbsp;&nbsp;<span class="key">cloud</span>: [<span class="val">"AWS Lambda"</span>, <span class="val">"Bedrock"</span>, <span class="val">"Docker"</span>],</div>
+            <div>&nbsp;&nbsp;<span class="key">location</span>: <span class="val">"Paris, Île-de-France"</span></div>
+            <div>}</div>
+            <br><div class="comment">// production mindset: monitoring, versioning, evaluation</div>
+          </div>
+        </aside>
       </div>
-    </div>
-    <div class="about-grid">
-      <div data-reveal>
-        <p>I'm a <strong>Data Science student</strong> passionate about Python, SQL, and Artificial Intelligence — currently completing an engineering degree in Tunisia while starting a Master's in AI &amp; Business Technology in Paris.</p>
-        <p>I enjoy solving complex problems and turning messy data into insight that's actually usable: models that predict churn, forecast demand, or catch delivery delays before they happen.</p>
-        <p>I'm looking for a role where I can keep building things that matter — data-driven, thoughtfully engineered, genuinely useful.</p>
-      </div>
-      <div class="stat-list" data-reveal>
-        <div class="stat-row"><span class="n">4+</span><span class="l">shipped ML &amp; data projects</span></div>
-        <div class="stat-row"><span class="n">2</span><span class="l">degrees in progress — ESPRIT &amp; PSTB Paris</span></div>
-        <div class="stat-row"><span class="n">4</span><span class="l">professional certifications</span></div>
-        <div class="stat-row"><span class="n">2026</span><span class="l">expected engineering graduation</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section section-alt" id="experience">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div>
-        <div class="eyebrow">02 · Experience</div>
-        <h2>Where I've worked.</h2>
-      </div>
-      <div class="section-num">2024 — present</div>
-    </div>
-
-    <div class="timeline-item" data-reveal>
-      <div class="timeline-date">Jul — Sep 2024<br>Nabeul, Tunisia</div>
-      <div class="timeline-body">
-        <h3>Data Analytics &amp; Mobile App Development Intern</h3>
-        <span class="org">Zhiffy</span>
-        <ul>
-          <li>Co-developed a mobile app for construction material delivery with real-time GPS tracking.</li>
-          <li>Built a machine learning model to predict delivery delays from traffic and weather, improving operational efficiency.</li>
-        </ul>
-        <div class="tagrow">
-          <span class="tag">Flutter</span><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">GPS APIs</span>
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about">
+          <div class="panel about-card" data-reveal>
+            <p>Ingénieure Data Science spécialisée en Intelligence Artificielle, IA générative et Machine Learning, admise en Mastère Spécialisé Big Data Engineer à l'UTT.</p>
+            <p>Je conçois des solutions ML/LLM de bout en bout: ingestion, embeddings, vector search, orchestration, évaluation, monitoring et restitution métier via dashboards ou rapports automatisés.</p>
+            <p>Objectif: construire des systèmes robustes, mesurables et réellement utiles aux équipes business.</p>
+          </div>
+          <div class="focus-grid" data-reveal>
+            <div class="focus"><strong>LLM & RAG Systems</strong><span>Vector search, context retrieval, prompt architecture and answer evaluation.</span></div>
+            <div class="focus"><strong>Analytics Engineering</strong><span>KPI dashboards, segmentation, data quality and business reporting.</span></div>
+            <div class="focus"><strong>ML Products</strong><span>Churn prediction, delay forecasting and recommendation optimization.</span></div>
+            <div class="focus"><strong>Production Delivery</strong><span>Monitoring, versioning, documentation, REST APIs, Docker and stakeholder demos.</span></div>
+          </div>
+        </div>
+        <div class="impact-strip" data-reveal>
+          <div class="impact-card"><b>RAG</b><span>Vector search, embeddings, retrieval optimization and LLM answer quality.</span></div>
+          <div class="impact-card"><b>Prod</b><span>Monitoring, versioning, evaluation loops and stakeholder-ready demos.</span></div>
+          <div class="impact-card"><b>BI</b><span>KPI dashboards, segmentation and decision analytics for growth teams.</span></div>
+          <div class="impact-card"><b>ML</b><span>Predictive systems for churn, recommendations and delivery-delay planning.</span></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section" id="projects">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div>
-        <div class="eyebrow">03 · Projects</div>
-        <h2>Things I've built.</h2>
-      </div>
-      <div class="section-num">04 selected</div>
-    </div>
-
-    <div class="project-grid" data-reveal-stagger>
-      <div class="project-card">
-        <div class="project-mark" data-index="01"></div>
-        <h3>AI-Driven Retail Insights</h3>
-        <p>Market Basket Analysis and LSTM forecasting to uncover purchase patterns and improve store layout and inventory decisions.</p>
-        <div class="tagrow"><span class="tag">Python</span><span class="tag">LSTM</span><span class="tag">Market Basket Analysis</span></div>
-        <a class="project-link" href="https://github.com/sarahammoudaa/retail_AI" target="_blank" rel="noopener">View repository <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-mark" data-index="02"></div>
-        <h3>MarketMind AI Platform</h3>
-        <p>An AI platform automating smart, data-driven marketing for small businesses — tailoring content and predicting engagement.</p>
-        <div class="tagrow"><span class="tag">JavaScript</span><span class="tag">AI</span><span class="tag">Predictive Analytics</span></div>
-        <a class="project-link" href="https://github.com/sarahammoudaa/MARKETMIND" target="_blank" rel="noopener">View repository <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-mark" data-index="03"></div>
-        <h3>Customer Churn Prediction</h3>
-        <p>A machine learning model predicting telecom customer churn, helping identify at-risk customers early to improve retention.</p>
-        <div class="tagrow"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span></div>
-        <a class="project-link" href="https://github.com/sarahammoudaa/Customer-Churn-Prediction" target="_blank" rel="noopener">View repository <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-mark" data-index="04"></div>
-        <h3>BatiVite — Delivery App</h3>
-        <p>A Flutter app for construction material delivery using AI to predict delays and optimize logistics routing.</p>
-        <div class="tagrow"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Machine Learning</span></div>
-        <a class="project-link" href="https://github.com/sarahammoudaa/bati_vite" target="_blank" rel="noopener">View repository <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt" id="skills">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div>
-        <div class="eyebrow">04 · Skills</div>
-        <h2>My toolkit.</h2>
-      </div>
-    </div>
-    <div class="skill-groups" data-reveal>
-      <div class="skill-group">
-        <h4>Languages</h4>
-        <div class="pill-row">
-          <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">C++</span><span class="pill">HTML / CSS</span>
+    <section class="section" id="expertise">
+      <div class="wrap">
+        <div class="expertise-grid" data-reveal>
+          <div class="expertise-card"><div class="ico">🧠</div><h3>Generative AI & LLMs</h3><p>LLM applications, structured prompting, RAG pipelines, answer evaluation and reliable report generation for business workflows.</p></div>
+          <div class="expertise-card"><div class="ico">🔎</div><h3>RAG & Vector Search</h3><p>Embedding pipelines, context retrieval, FAISS/ChromaDB-style architectures and documentation for reusable knowledge systems.</p></div>
+          <div class="expertise-card"><div class="ico">📈</div><h3>Machine Learning Impact</h3><p>Segmentation, churn prediction, forecasting and delay-prediction models tied to measurable outcomes like 60% relevance lift and 92% accuracy.</p></div>
+          <div class="expertise-card"><div class="ico">⚙️</div><h3>Production AI Delivery</h3><p>Monitoring, versioning, continuous evaluation, REST APIs, Docker and stakeholder communication to move projects beyond notebooks.</p></div>
+          <div class="expertise-card"><div class="ico">📊</div><h3>Analytics Engineering</h3><p>KPI dashboards, Power BI, EDA, data quality and decision analyses that help teams see what to fix and where growth comes from.</p></div>
+          <div class="expertise-card"><div class="ico">☁️</div><h3>Cloud & Data Stack</h3><p>AWS Lambda, Bedrock, API integration, ETL pipelines, data modeling and vector databases for scalable AI/data products.</p></div>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Databases</h4>
-        <div class="pill-row">
-          <span class="pill">MySQL</span><span class="pill">PostgreSQL</span>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="timeline">
+          <article class="xp" data-reveal><div class="date">03/2026 — 08/2026<br>Paris, France</div><div><h3>Generative AI Engineer & AI Consultant</h3><div class="org">NeuralTeks</div><div class="place">Paris, Île-de-France</div><ul><li>Industrialized GenAI and RAG solutions to automate business inspections, improve LLM answer reliability and accelerate report generation.</li><li>Deployed production-ready LLM pipelines with monitoring, versioning and continuous evaluation, while presenting technical results to stakeholders.</li></ul><div class="tags"><span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">LLM Evaluation</span><span class="tag">Monitoring</span></div></div></article>
+          <article class="xp" data-reveal><div class="date">06/2025 — 12/2025<br>Remote / Paris</div><div><h3>Freelance — AI Project</h3><div class="org">Imperia AI</div><ul><li>Architected a RAG solution using vector search to improve knowledge access and generated-answer quality.</li><li>Optimized embedding and context-retrieval pipelines, documenting the architecture for maintainability and reuse.</li></ul><div class="tags"><span class="tag">Vector Search</span><span class="tag">Embeddings</span><span class="tag">FAISS</span><span class="tag">Architecture</span></div></div></article>
+          <article class="xp" data-reveal><div class="date">07/2025 — 09/2025<br>Tunis, Tunisia</div><div><h3>Data Analyst / Analytics Engineering</h3><div class="org">VisShop AI</div><ul><li>Built marketing segmentation models that improved recommendation relevance by 60% and supported business decision-making.</li><li>Designed KPI dashboards and decision analyses to track performance and identify growth levers.</li></ul><div class="tags"><span class="tag">Segmentation</span><span class="tag">Power BI</span><span class="tag">KPI Tracking</span><span class="tag">EDA</span></div></div></article>
+          <article class="xp" data-reveal><div class="date">07/2024 — 09/2024<br>Tunis, Tunisia</div><div><h3>Machine Learning Engineer</h3><div class="org">Viore Digital</div><ul><li>Developed predictive models to anticipate delivery delays and improve planning for a GPS tracking application.</li><li>Designed a real-time tracking solution combining geolocation data and Machine Learning with the project team.</li></ul><div class="tags"><span class="tag">Machine Learning</span><span class="tag">GPS Data</span><span class="tag">Python</span><span class="tag">Operations</span></div></div></article>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>ML &amp; Data Libraries</h4>
-        <div class="pill-row">
-          <span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Scikit-learn</span><span class="pill">Matplotlib</span><span class="pill">Seaborn</span>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="projects">
+          <article class="project panel" data-reveal>
+            <div class="headline"><div class="num">01</div><span class="badge">GenAI + RAG</span></div>
+            <h3>MarketMind AI — GenAI Marketing Platform</h3>
+            <p>Built a GenAI platform that automates marketing workflows and content generation for SMEs, combining LLM orchestration, RAG and creative AI components.</p>
+            <div class="mini-metrics"><span class="mini-metric">LLM Pipeline</span><span class="mini-metric">RAG System</span><span class="mini-metric">SME Automation</span></div>
+            <h4>Architecture & Features</h4>
+            <ul class="feature-list"><li>End-to-end AI workflow: prompt design, retrieval, generation and output structuring.</li><li>RAG layer for grounding marketing content on business context instead of generic generation.</li><li>Integrated Python, LangChain, HuggingFace, LLaMA 3, FAISS and Stable Diffusion.</li></ul>
+            <div class="flow"><span>Business Input</span><i>→</i><span>Vector Retrieval</span><i>→</i><span>AI Content Output</span></div>
+            <div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">LLaMA 3</span><span class="tag">FAISS</span><span class="tag">Stable Diffusion</span></div><a href="https://github.com/sarahammoudaa/MARKETMIND" target="_blank" rel="noopener">View repository →</a>
+          </article>
+          <article class="project panel" data-reveal>
+            <div class="headline"><div class="num">02</div><span class="badge">92% Accuracy</span></div>
+            <h3>Telecom Churn Prediction</h3>
+            <p>Developed predictive models to identify at-risk customers earlier and support retention actions with measurable model performance.</p>
+            <div class="mini-metrics"><span class="mini-metric">92% Precision</span><span class="mini-metric">3 Models Compared</span><span class="mini-metric">Imbalance Handling</span></div>
+            <h4>Technical Approach</h4>
+            <ul class="feature-list"><li>Compared TabNet, Random Forest and KNN to select the strongest churn-classification approach.</li><li>Applied feature engineering and class-imbalance handling to improve signal quality.</li><li>Translated model output into business retention insight, not just notebook metrics.</li></ul>
+            <div class="flow"><span>Customer Data</span><i>→</i><span>Risk Scoring</span><i>→</i><span>Retention Action</span></div>
+            <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">TabNet</span><span class="tag">Random Forest</span><span class="tag">Feature Engineering</span></div><a href="https://github.com/sarahammoudaa/Customer-Churn-Prediction" target="_blank" rel="noopener">View repository →</a>
+          </article>
+          <article class="project panel" data-reveal>
+            <div class="headline"><div class="num">03</div><span class="badge">Retail AI</span></div>
+            <h3>AI-Driven Retail Insights</h3>
+            <p>Created a retail analytics solution using market basket analysis and forecasting to uncover purchasing patterns, improve layout decisions and support inventory planning.</p>
+            <div class="mini-metrics"><span class="mini-metric">Market Basket</span><span class="mini-metric">Forecasting</span><span class="mini-metric">Inventory Decisions</span></div>
+            <h4>Business Impact</h4>
+            <ul class="feature-list"><li>Surfaced product affinities to help teams understand what customers buy together.</li><li>Forecasting layer to anticipate demand trends and reduce reactive inventory decisions.</li><li>Designed for decision-makers: insight-first analytics instead of raw charts only.</li></ul>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Forecasting</span><span class="tag">Market Basket</span><span class="tag">Analytics</span></div><a href="https://github.com/sarahammoudaa/retail_AI" target="_blank" rel="noopener">View repository →</a>
+          </article>
+          <article class="project panel" data-reveal>
+            <div class="headline"><div class="num">04</div><span class="badge">Real-time ML</span></div>
+            <h3>BatiVite — AI Delivery Tracking</h3>
+            <p>Designed a construction-material delivery application concept using real-time GPS data and predictive ML to anticipate delivery delays and improve logistics planning.</p>
+            <div class="mini-metrics"><span class="mini-metric">GPS Tracking</span><span class="mini-metric">Delay Prediction</span><span class="mini-metric">Ops Planning</span></div>
+            <h4>System Design</h4>
+            <ul class="feature-list"><li>Combined geolocation data, traffic/weather signals and ML features for delay prediction.</li><li>Mobile-first delivery workflow designed for operational teams in the field.</li><li>Built to reduce uncertainty before delays become customer-facing problems.</li></ul>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Python</span><span class="tag">ML</span><span class="tag">GPS APIs</span></div><a href="https://github.com/sarahammoudaa/bati_vite" target="_blank" rel="noopener">View repository →</a>
+          </article>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Frameworks</h4>
-        <div class="pill-row">
-          <span class="pill">TensorFlow</span><span class="pill">Keras</span><span class="pill">Flask</span><span class="pill">Django (learning)</span>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="wrap">
+        <div class="focus-now" data-reveal>
+          <div class="now-card"><h3 style="font-size:30px;margin:0 0 14px;letter-spacing:-.05em">What I am optimizing for now</h3><p style="color:var(--muted);line-height:1.75;margin:0">I am actively deepening my expertise in LLM applications, RAG architectures, agentic workflows, cloud deployment and Big Data engineering so I can join teams that need AI systems shipped with quality, speed and measurable business impact.</p><div class="proofbar"><span class="proof">LLM Evaluation</span><span class="proof">Vector DBs</span><span class="proof">AWS Bedrock</span><span class="proof">ETL</span></div></div>
+          <div class="now-list"><div class="now-item"><strong>Large Language Models:</strong> using LLMs effectively with structured prompts, APIs and evaluation loops.</div><div class="now-item"><strong>RAG Systems:</strong> building knowledge-grounded applications with embeddings, retrieval and answer validation.</div><div class="now-item"><strong>Agentic Workflows:</strong> exploring autonomous task routing, tool use and multi-step AI workflows.</div><div class="now-item"><strong>Deployment:</strong> turning prototypes into usable systems with monitoring, versioning, Docker and cloud services.</div></div>
+        </div>
+        <div class="fomo" data-reveal>Hiring signal: I bring the rare mix of Data Science + GenAI + analytics engineering — someone who can prototype, explain the architecture, measure the output and translate it into business value.</div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head" data-reveal><div><div class="eyebrow">06 · Skills</div><h2>Technical toolkit.</h2></div></div>
+        <div class="skills" data-reveal>
+          <div class="skill"><h3>Programming</h3><div class="pill-row"><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">JavaScript / Node.js</span><span class="pill">Java</span></div></div>
+          <div class="skill"><h3>AI / GenAI</h3><div class="pill-row"><span class="pill">LLMs</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">Structured Prompting</span><span class="pill">LangChain</span><span class="pill">ChromaDB</span><span class="pill">LLM APIs</span></div></div>
+          <div class="skill"><h3>Data Engineering</h3><div class="pill-row"><span class="pill">ETL Pipelines</span><span class="pill">Data Modeling</span><span class="pill">Data Quality</span><span class="pill">API Integration</span><span class="pill">Vector Databases</span></div></div>
+          <div class="skill"><h3>Cloud & Tools</h3><div class="pill-row"><span class="pill">AWS Lambda</span><span class="pill">AWS Bedrock</span><span class="pill">REST APIs</span><span class="pill">Docker</span><span class="pill">GitLab</span><span class="pill">Jira</span></div></div>
+          <div class="skill"><h3>Analytics</h3><div class="pill-row"><span class="pill">Power BI</span><span class="pill">Dashboards</span><span class="pill">KPI Tracking</span><span class="pill">EDA</span><span class="pill">Data Visualization</span></div></div>
+          <div class="skill"><h3>Machine Learning</h3><div class="pill-row"><span class="pill">Scikit-learn</span><span class="pill">Feature Engineering</span><span class="pill">Customer Segmentation</span><span class="pill">Predictive Modeling</span></div></div>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Tools</h4>
-        <div class="pill-row">
-          <span class="pill">Git</span><span class="pill">Jupyter Notebook</span><span class="pill">Docker (basic)</span><span class="pill">VS Code</span>
+    </section>
+
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head" data-reveal><div><div class="eyebrow">07 · Formation</div><h2>Academic path.</h2></div></div>
+        <div class="edu">
+          <div class="edu-row" data-reveal><div class="date">2026 — 2027<br>Paris</div><div><h3>UTT</h3><p>Mastère Spécialisé Expert Big Data Engineer</p></div></div>
+          <div class="edu-row" data-reveal><div class="date">2025 — 2026<br>Paris</div><div><h3>PST&B</h3><p>Mastère 2 en Intelligence Artificielle & Business Technology</p></div></div>
+          <div class="edu-row" data-reveal><div class="date">2021 — 2026<br>Tunisia</div><div><h3>ESPRIT</h3><p>Diplôme d'Ingénieur en Informatique — spécialité Data Science</p></div></div>
+          <div class="edu-row" data-reveal><div class="date">2020 — 2021<br>Tunisia</div><div><h3>Lycée L'Idéale</h3><p>Baccalauréat Mathématique</p></div></div>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Certifications</h4>
-        <div class="pill-row">
-          <span class="pill">AWS Cloud Practitioner</span><span class="pill">Power BI (PL-300)</span><span class="pill">Dataiku</span><span class="pill">PMI Ready</span>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact" data-reveal>
+          <div class="eyebrow">08 · Contact</div>
+          <h2>Let's build reliable AI systems.</h2>
+          <p>Open to AI, Data Science, GenAI, RAG and Big Data apprenticeship opportunities from September 2026.</p>
+          <div class="hero-actions" style="justify-content:center;margin-top:26px"><a class="btn btn-primary" href="mailto:sarahammouda799@gmail.com">Email me →</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/sarahammouda/" target="_blank" rel="noopener">LinkedIn</a></div>
+          <div class="contact-links"><a href="tel:+33752901167">+33 7 52 90 11 67</a><a href="https://github.com/sarahammoudaa" target="_blank" rel="noopener">github.com/sarahammoudaa</a><a href="https://www.linkedin.com/in/sarahammouda/" target="_blank" rel="noopener">linkedin/sarahammouda</a></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-<section class="section" id="education">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div>
-        <div class="eyebrow">05 · Education</div>
-        <h2>Where I've studied.</h2>
-      </div>
-    </div>
+  <footer><div class="wrap">© 2026 Sara Hamouda · AI Engineer | Data Science & Generative AI</div></footer>
 
-    <div class="edu-item" data-reveal>
-      <div class="edu-date">Starting Oct 2025<br>Paris, France</div>
-      <div class="edu-body">
-        <h3>Paris School of Technology and Business</h3>
-        <span class="org">Master 2 — Intelligence Artificielle &amp; Business Technology</span>
-        <div class="edu-focus">
-          <span class="tag">Machine &amp; Deep Learning</span><span class="tag">Big Data &amp; Streaming</span><span class="tag">NLP</span><span class="tag">AI Ethics</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="edu-item" data-reveal>
-      <div class="edu-date">Expected Sep 2026<br>Ariana, Tunisia</div>
-      <div class="edu-body">
-        <h3>ESPRIT</h3>
-        <span class="org">Bachelor of Engineering — Computer Science</span>
-        <div class="edu-focus">
-          <span class="tag">Big Data &amp; BI</span><span class="tag">Machine Learning</span><span class="tag">Statistics &amp; Probability</span><span class="tag">Algorithms</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="edu-item" data-reveal>
-      <div class="edu-date">Graduated Jul 2021<br>Nabeul, Tunisia</div>
-      <div class="edu-body">
-        <h3>L'Idéale High School</h3>
-        <span class="org">Baccalaureate — Mathematics Section</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="wrap">
-    <div class="contact" data-reveal>
-      <div class="eyebrow" style="justify-content:center;color:var(--grey-300);">06 · Contact</div>
-      <h2>Let's build something<br>with data.</h2>
-      <p>Open to internships and graduate roles in Data Science &amp; AI. Reach out — I usually reply within a day.</p>
-      <div class="contact-cta">
-        <a class="btn btn-primary" href="mailto:sara.hammouda@esprit.tn">Email me</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/sara-hammouda-671a7b239/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <div class="contact-links">
-        <a href="tel:+21628238700">+216 28 238 700</a>
-        <a href="https://github.com/sarahammoudaa" target="_blank" rel="noopener">github.com/sarahammoudaa</a>
-        <a href="https://www.linkedin.com/in/sara-hammouda-671a7b239/" target="_blank" rel="noopener">linkedin.com/in/sara-hammouda</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:1rem;">
-    <span>© 2026 Sara Hammouda</span>
-    <span>Built with Python-brained precision.</span>
-  </div>
-</footer>
-
-<script>
-  // --- header scroll state ---
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive:true });
-
-  // --- scroll reveal ---
-  const revealEls = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
-
-  // --- neural mesh canvas ---
-  const canvas = document.getElementById('mesh');
-  const ctx = canvas.getContext('2d');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let w, h, points = [];
-  const POINT_COUNT_BASE = 70;
-
-  function resize(){
-    w = canvas.width = canvas.offsetWidth * devicePixelRatio;
-    h = canvas.height = canvas.offsetHeight * devicePixelRatio;
-  }
-
-  function initPoints(){
-    const count = Math.min(110, Math.max(40, Math.floor((canvas.offsetWidth * canvas.offsetHeight) / 16000)));
-    points = Array.from({length: count}).map(() => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.25 * devicePixelRatio,
-      vy: (Math.random() - 0.5) * 0.25 * devicePixelRatio
-    }));
-  }
-
-  let mouse = { x: -9999, y: -9999 };
-  canvas.addEventListener('mousemove', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    mouse.x = (e.clientX - rect.left) * devicePixelRatio;
-    mouse.y = (e.clientY - rect.top) * devicePixelRatio;
-  });
-  canvas.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
-
-  function step(){
-    ctx.clearRect(0,0,w,h);
-    const linkDist = 130 * devicePixelRatio;
-
-    for (const p of points) {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > w) p.vx *= -1;
-      if (p.y < 0 || p.y > h) p.vy *= -1;
-
-      const dx = p.x - mouse.x, dy = p.y - mouse.y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < 110 * devicePixelRatio) {
-        const force = (1 - dist / (110 * devicePixelRatio)) * 0.6;
-        p.x += (dx / (dist || 1)) * force;
-        p.y += (dy / (dist || 1)) * force;
-      }
-    }
-
-    for (let i = 0; i < points.length; i++) {
-      for (let j = i + 1; j < points.length; j++) {
-        const a = points[i], b = points[j];
-        const dx = a.x - b.x, dy = a.y - b.y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < linkDist) {
-          ctx.strokeStyle = `rgba(255,255,255,${(1 - dist/linkDist) * 0.35})`;
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
-        }
-      }
-    }
-    for (const p of points) {
-      ctx.fillStyle = 'rgba(255,255,255,0.75)';
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, 1.6 * devicePixelRatio, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    if (!reducedMotion) requestAnimationFrame(step);
-  }
-
-  function setup(){
-    resize();
-    initPoints();
-    ctx.clearRect(0,0,w,h);
-    if (!reducedMotion) {
-      requestAnimationFrame(step);
-    } else {
-      // draw a single static frame
-      step();
-    }
-  }
-  window.addEventListener('resize', () => { resize(); initPoints(); });
-  setup();
-</script>
-
+  <script>
+    const roles = ["AI Engineer", "Generative AI Consultant", "RAG & LLM Builder", "Data Science Engineer"];
+    const el = document.getElementById("typed"); let ri = 0, ci = 0, del = false;
+    function type(){ const word = roles[ri]; el.textContent = del ? word.slice(0, ci--) : word.slice(0, ci++); if(!del && ci > word.length + 8) del = true; if(del && ci < 0){ del = false; ri = (ri + 1) % roles.length; ci = 0; } setTimeout(type, del ? 45 : 75); }
+    type();
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); }), {threshold:.14});
+    document.querySelectorAll('[data-reveal]').forEach(x => io.observe(x));
+    window.addEventListener('mousemove', e => { document.documentElement.style.setProperty('--mx', e.clientX + 'px'); document.documentElement.style.setProperty('--my', e.clientY + 'px'); });
+  </script>
 </body>
 </html>
